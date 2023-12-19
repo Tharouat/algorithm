@@ -1,0 +1,42 @@
+ALGORITHM second_task
+var
+set1: ARRAY_OF INTEGER; 
+set2: ARRAY_OF INTEGER;
+set3: ARRAY_OF INTEGER; 
+N,N1,i,j,sum : INTEGER;
+BEGIN
+
+FOR i FROM 0 TO N-1 STEP 1 DO
+    Read(set1[i]);
+END_FOR
+
+Read(set1);
+
+FOR j FROM 0 TO N1-1 STEP 1 DO
+    Read(set2[j]);
+END_FOR
+
+Read(set2);
+
+sum : 0;
+FOR i FROM 0 TO N-1 STEP 1 DO
+    FOR j FROM 0 TO N1-1 STEP 1  DO
+        IF (set1[i]<>set2[j]) THEN
+            sum := sum + i
+            set3[i] : set1[i];
+        END_IF
+    END_FOR
+END_FOR
+FOR j FROM 0 TO N1-1 STEP 1 DO
+    FOR i FROM 0 TO N-1 STEP 1  DO
+        IF (set2[j]<>set1[i]) THEN
+            sum := sum + j
+            set3[j] : set2[j];
+        END_IF
+    END_FOR
+END_FOR   
+
+Write(set3);
+
+
+END
