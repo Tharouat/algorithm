@@ -11,7 +11,7 @@ BEGIN
         IF (length(v1)<>length(v2)) THEN
             write ("Vectors must have the same length")
         ELSE
-            FOR i FROM 1 TO length(v1) STEP 1  DO
+            FOR i FROM 1 TO length(v1) STEP 1 DO
                 ps = ps + (v1[i] * v2[i])
             END_FOR
         END_IF
